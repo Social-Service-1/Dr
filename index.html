@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أعضاء هيئة التدريس - كلية الخدمة الاجتماعية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #1a5276;
+            --secondary: #2e86c1;
+            --accent: #f39c12;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 4px solid var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: var(--dark);
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .teacher-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .teacher-image {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .teacher-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .teacher-card:hover .teacher-image img {
+            transform: scale(1.05);
+        }
+
+        .teacher-basic-info {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .teacher-basic-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .teacher-basic-info p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .info-btn {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 5px 15px rgba(26, 82, 118, 0.3);
+            margin-top: auto;
+        }
+
+        .info-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(26, 82, 118, 0.4);
+        }
+
+        .teacher-info {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .teacher-info.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .info-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .info-header h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+
+        .close-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .close-btn:hover {
+            background: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        .info-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .info-item i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .info-content-text h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .info-content-text p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 25px;
+            grid-column: 1 / -1;
+        }
+
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .contact-item i {
+            color: var(--secondary);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .teachers-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .info-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .teachers-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .teacher-image {
+                height: 250px;
+            }
+            
+            .teacher-info {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .teachers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .info-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            .info-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi201Tw7yUFj8r74gTtygCWXD7685LR2C8yrx3osHYPBRH_28p85yq7GS3VZUMkVVoyv7mT9NuMZDIlDAQo7XFJRjRLMl4thzdO_Gdkpkz7kS_z2kEjpURj2-QrISs6sKBpdlRCcMiuBPriE0ndYz9dw-umnYe1v7MmzJTkyoJZRxEfYkHUYd4z-KBNqWJo/s1600/21634.jpg" alt="شعار الكلية">
+                </div>
+                <h1>كلية الخدمة الاجتماعية</h1>
+            </div>
+            
+        </div>
+
+        <div class="teachers-grid">
+            <!-- الدكتور 1 -->
+           
+    <!-- نافذة المعلومات للدكتور 1 -->
+   <!-- الدكتور عمرو محمد عبد المجيد عامر -->
+<div class="teacher-card">
+    <div class="teacher-image">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8EtsIe4prk70z9dynKpAPF6VMNIVBPA9hpwwxAXOAzm-sqSPwwhU10mmFJyexfs5wsqOo_2IyZat9FoBgDy3HBwZuhtBDIAWjJOFLQB2nyVghZtlG9MWADWwvCXI6iCGQk3uwHxPqy9RcKx8Sf-Dz1-dI5CY2ZfsU7Qi112KyKGtUF-qROZPzNG7cQvZo/s1056/21942.jpg" alt="د. عمرو محمد عبد المجيد عامر">
+    </div>
+    <div class="teacher-basic-info">
+        <div>
+            <h3>د. عمرو محمد عبد المجيد عامر</h3>
+            <p>محاضر بكلية الخدمة الاجتماعية - جامعة الأزهر</p>
+        </div>
+        <button class="info-btn" onclick="showInfo(2)">
+            <span>عرض المعلومات</span>
+            <i class="fas fa-chevron-left"></i>
+        </button>
+    </div>
+</div>
+
+<!-- نافذة المعلومات للدكتور عمرو -->
+<div class="teacher-info" id="info-2">
+    <div class="info-header">
+        <h2>د. عمرو محمد عبد المجيد عامر</h2>
+        <button class="close-btn" onclick="hideInfo(2)">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <div class="info-content">
+        <div class="info-column">
+            <div class="info-item">
+                <i class="fas fa-user-graduate"></i>
+                <div class="info-content-text">
+                    <h3>المؤهلات العلمية</h3>
+                    <p>دكتوراه في الخدمة الاجتماعية تخصص "خدمة الفرد"<br>ماجستير في الخدمة الاجتماعية<br>بكالوريوس في الخدمة الاجتماعية</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-briefcase"></i>
+                <div class="info-content-text">
+                    <h3>المنصب الحالي</h3>
+                    <p>محاضر بكلية الخدمة الاجتماعية بنين بالقاهرة<br>جامعة الأزهر<br>مدرب معتمد من كبرى المؤسسات التدريبية</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-book"></i>
+                <div class="info-content-text">
+                    <h3>مجالات التخصص</h3>
+                    <p>خدمة الفرد - الدفاع الاجتماعي - التعامل مع الأحداث الجانحين - إدارة الأنشطة التطوعية - المعسكرات الكشفية - الدراسات النفسية - أبحاث علم الاجتماع</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-column">
+            <div class="info-item">
+                <i class="fas fa-trophy"></i>
+                <div class="info-content-text">
+                    <h3>الإنجازات العلمية</h3>
+                    <p>نشر العديد من الأبحاث في مجلات علمية محكمة<br>المشاركة في مؤتمرات دولية<br>الحصول على شهادات مدرب معتمد من مؤسسات تدريبية بمصر والوطن العربي<br>إجادة متقدمة للغة الإنجليزية</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-users"></i>
+                <div class="info-content-text">
+                    <h3>المهارات والخبرات</h3>
+                    <p>محترف في التعامل مع الأحداث الجانحين وأسرهم<br>خبرة واسعة في إدارة الأنشطة التطوعية والمعسكرات الكشفية<br>خبرة تدريسية في مجالات متعددة<br>حاصل على كورسات مهنية وأكاديمية متخصصة</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <div class="info-content-text">
+                    <h3>المجال البحثي</h3>
+                    <p>الخدمة الاجتماعية - علم الاجتماع - علم النفس - الدفاع الاجتماعي - الرعاية الاجتماعية - التأهيل المجتمعي</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <h3>معلومات الاتصال</h3>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>AmrAmer1432.el@/azhar.edu.eg</span>
+                </div>
+ 
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>كلية الخدمة الاجتماعية بنين الخانكه - جامعة الأزهر - القاهرة</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span>أيام العمل: الأحد - الثلاثاء - الخميس</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- طبقة التعتيم الخلفية -->
+    <div class="overlay" id="overlay"></div>
+
+    <script>
+        function showInfo(teacherId) {
+            const infoElement = document.getElementById(`info-${teacherId}`);
+            const overlay = document.getElementById('overlay');
+            
+            infoElement.classList.add('active');
+            overlay.classList.add('active');
+            
+            // منع التمرير عند فتح النافذة
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideInfo(teacherId) {
+            const infoElement = document.getElementById(`info-${teacherId}`);
+            const overlay = document.getElementById('overlay');
+            
+            infoElement.classList.remove('active');
+            overlay.classList.remove('active');
+            
+            // إعادة التمرير
+            document.body.style.overflow = 'auto';
+        }
+
+        // إغلاق النافذة عند النقر على overlay
+        document.getElementById('overlay').addEventListener('click', function() {
+            const activeInfo = document.querySelector('.teacher-info.active');
+            if (activeInfo) {
+                const teacherId = activeInfo.id.split('-')[1];
+                hideInfo(teacherId);
+            }
+        });
+
+        // إغلاق النافذة بالزر Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const activeInfo = document.querySelector('.teacher-info.active');
+                if (activeInfo) {
+                    const teacherId = activeInfo.id.split('-')[1];
+                    hideInfo(teacherId);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
