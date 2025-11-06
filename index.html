@@ -104,12 +104,17 @@
             height: 300px;
             position: relative;
             overflow: hidden;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .teacher-image img {
-            width: 100%;
+            width: auto;
             height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            object-fit: contain;
             transition: var(--transition);
         }
 
@@ -407,7 +412,7 @@
             <!-- الأستاذ الدكتور إبراهيم عبدالمحسن حجاج -->
             <div class="teacher-card">
                 <div class="teacher-image">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUJR0YziY16dm29_yCzQhhxrQwn3a7l46MAL7J4bw4Hp1fYjOLXnn87UOiK2POUqemjv-M-MnlkIGsV5m2rENjVugEpLqAtxzJ4h_4sTOIPIuXv4RChNFseWIGVD2SxW8fHKHhr0d9PZSykyTz8QXxJ_92JBPxZMuH6EuskOKdbxmK87aab3HJVjYT2t7B/s381/31353.jpg" alt="أ.د. إبراهيم عبدالمحسن حجاج">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUDMycSOmIPnLzI9VnVqQeB2YMk_I9816GkQWTw6A89aH0rAgDMxw_On24X0ChD9BBrCgdp8QyvaVLeRU4jQ0rjUbvgHgitX0wNGv8JeXWJvT7x5G2nI5zJF7jxYkIlqn9STbY6QV8WG_6hP2Va4Ag1ZOnzQqtfjKgpTH9xxbIvWHRZmlYPZkxvvztli3f/s1081/30153.jpg" alt="أ.د. إبراهيم عبدالمحسن حجاج">
                 </div>
                 <div class="teacher-basic-info">
                     <div>
@@ -438,6 +443,74 @@
                 </div>
             </div>
 
+            <!-- الدكتور أسامة أحمد حسن -->
+            <div class="teacher-card">
+                <div class="teacher-image">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEIqHHwimuo1QS1pDeDYTTEROgXnIxbAg98CiX-M5ZHIT-QTkTCNixHkj63AMg7exnRaL4iHDXws3TqMawFavMcyjttMPsrgP4qqAbqVG3I4n4IS_JtQ-lZZv-eRr4g-TPR_pLkUHBt8QzzGX6XeiBDCW8V2awNsCeTZ02im66X8gfV3xdAOghCbVu0t4C/s304/33320.jpg" alt="د. أسامة أحمد حسن">
+                </div>
+                <div class="teacher-basic-info">
+                    <div>
+                        <h3>د. أسامة أحمد حسن أحمد</h3>
+                        <p>أستاذ مساعد بقسم التخطيط الاجتماعي</p>
+                    </div>
+                    <button class="info-btn" onclick="showInfo(6)">
+                        <span>عرض المعلومات</span>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- الدكتور عبدالحميد القراجي -->
+            <div class="teacher-card">
+                <div class="teacher-image">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjlEedOO2bqAZqhq3MUFdkgU8UchrCj-qDAp5w2HMwYkXf8zyWsLPwp8MN50wsKHVsQWcGCRjOJsE1pHkAsx0H9OrjOt5yZw_j89MHz-y322Cs7zPK-IR-T37NuSDLxXOJixdR1O1Y-8HRc2HyN8qcmKINk0LA6r132WypZ-szwaFenvZxJHhO2oaASB3d/s280/33321.jpg" alt="د. عبدالحميد القراجي">
+                </div>
+                <div class="teacher-basic-info">
+                    <div>
+                        <h3>د. عبدالحmيد عبدالمنعم عبدالحميد خميس القراجي</h3>
+                        <p>مدرس بقسم التخطيط الاجتماعي</p>
+                    </div>
+                    <button class="info-btn" onclick="showInfo(7)">
+                        <span>عرض المعلومات</span>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- الدكتور مصطفى محمود أحمد -->
+            <div class="teacher-card">
+                <div class="teacher-image">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSRJMRyKDSSMCnknle3JLrc6AE1YsC0qMmNFhjfEG7X4EKN3zp5esoRGODF4h5IY-v9y28Fh9TT0uojwWI1guegg83Yxljz9EtzXvJsTk8S00xT6S7awxhKYl0C6HnROpcKzrApMB21RTQ3SKvYPpPig3gd5vEAE8bsdIclurF-v6kgfIPSu_nPUKtWl42/s251/33322.jpg" alt="د. مصطفى محمود أحمد">
+                </div>
+                <div class="teacher-basic-info">
+                    <div>
+                        <h3>د. مصطفى محمود أحمد</h3>
+                        <p>مدرس بقسم تنمية المجتمع والدراسات البيئية</p>
+                    </div>
+                    <button class="info-btn" onclick="showInfo(8)">
+                        <span>عرض المعلومات</span>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- الدكتور عبد الفتاح الجمل -->
+            <div class="teacher-card">
+                <div class="teacher-image">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdYDLy8MgOzEqs-4iKZvSJQpWe7mWjkQ_GFce9i9Il7oCXdCzKnfJckdzrDkqL1smuSKJQMtw1JD3Q609sKkREkfGTfK0OOTdlzZTGnzlZ49M80UrDt7ActGGV8Av24lgyT3C_9Pj1EUTcz82zEkvcmLifMflXsChiiFtZd4G5eoA5Dc3KTAZAVqLdvVti/s293/33323.jpg" alt="د. عبد الفتاح الجمل">
+                </div>
+                <div class="teacher-basic-info">
+                    <div>
+                        <h3>د. عبد الفتاح عمر محمد سالم الجمل</h3>
+                        <p>مدرس بقسم مجالات الخدمة الاجتماعية</p>
+                    </div>
+                    <button class="info-btn" onclick="showInfo(9)">
+                        <span>عرض المعلومات</span>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+
             <!-- الدكتور عمرو محمد عبد المجيد عامر -->
             <div class="teacher-card">
                 <div class="teacher-image">
@@ -449,40 +522,6 @@
                         <p>محاضر بكلية الخدمة الاجتماعية - جامعة الأزهر</p>
                     </div>
                     <button class="info-btn" onclick="showInfo(2)">
-                        <span>عرض المعلومات</span>
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- الدكتور عبد الفتاح فرج محمد مسعد -->
-            <div class="teacher-card">
-                <div class="teacher-image">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzTzOsedi2GKp4U2ijafGdY6eOawNG9PK5mEA2txZ4ZXc4FK96Sj79CcqRlKa10GlcFjE9Yw6U33AqJwZIi5pml4_vvpSL1F1U9lu4eMYkLuL60jwVq3T8sbyiOr5Ai0UIdIKr7WpfIEt4kBx2hwE1kwrjHvnFV4EqBYJwUJs_fgjMwAiT87jSvqlDSv7d/s443/32816.jpg" alt="د. عبد الفتاح فرج محمد مسعد">
-                </div>
-                <div class="teacher-basic-info">
-                    <div>
-                        <h3>د. عبد الفتاح فرج محمد مسعد</h3>
-                        <p>مدرس بقسم تنمية المجتمع والدراسات البيئية بالكلية</p>
-                    </div>
-                    <button class="info-btn" onclick="showInfo(6)">
-                        <span>عرض المعلومات</span>
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- الدكتور هاني جعفر محمد نور عبد الهادي -->
-            <div class="teacher-card">
-                <div class="teacher-image">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQdRmrsf0N1_SRRinudgHrPj8oKEj_MXM99UCzd48ENlLf6aw-5kAMrv-KoS-Nvfg4iAeghl71SSMuwGLtgR3RgymEhIGtYVhmTPQc6-LH9nZAiC0qKOZEFpfbsVcO1iOyfc-89DTIZGMkkq6N3MkNNMDCPemudsTVchYVrJv8k63q3wljTw2xrMb1T39X/s424/32798.jpg" alt="د. هاني جعفر محمد نور عبد الهادي">
-                </div>
-                <div class="teacher-basic-info">
-                    <div>
-                        <h3>د. هاني جعفر محمد نور عبد الهادي</h3>
-                        <p>أستاذ مساعد بقسم خدمة الفرد - كلية الخدمة الاجتماعية</p>
-                    </div>
-                    <button class="info-btn" onclick="showInfo(7)">
                         <span>عرض المعلومات</span>
                         <i class="fas fa-chevron-left"></i>
                     </button>
@@ -660,7 +699,7 @@
                     <div class="info-item">
                         <i class="fas fa-user-graduate"></i>
                         <div class="info-content-text">
-                            <h3>المؤهلات العلمية</h3>
+                            <h3>المؤهلات科学ية</h3>
                             <p>• دكتوراه في تنمية المجتمع بتقدير ممتاز مع التوصية بتبادل الرسالة مع الجامعات والمراكز البحثية (2010)<br>• ماجستير في تنمية المجتمع بتقدير ممتاز (2007)<br>• بكالوريوس في الخدمة الاجتماعية بتقدير ممتاز مع مرتبة الشرف (الأول على الدفعة)</p>
                         </div>
                     </div>
@@ -695,7 +734,7 @@
                         <i class="fas fa-trophy"></i>
                         <div class="info-content-text">
                             <h3>الدورات التدريبية وورش العمل</h3>
-                            <p>• برنامج تدريبي في التحفيز<br>• برنامج تدريبي في التخطيط<br>• برنامج تدريبي في إعداد وتصميم البرامج الدراسية<br>• برنامج تدريبي في أخلاقيات البحث科學ي<br>• برنامج تدريبي في نظم الامتحانات وتقويم الطلاب<br>• برنامج تدريبي في النجاح المتميز<br>• إدارة الأزمات والكوارث<br>• الإدارة الفعالة للوقت<br>• المهارات الإدارية والقانونية<br>• الاتجاهات الحديثة<br>• التخطيط الاستراتيجي<br>• مهارات العرض والاتصال</p>
+                            <p>• برنامج تدريبي في التحفيز<br>• برنامج تدريبي في التخطيط<br>• برنامج تدريبي في إعداد وتصميم البرامج الدراسية<br>• برنامج تدريبي في أخلاقيات البحث العلمي<br>• برنامج تدريبي في نظم الامتحانات وتقويم الطلاب<br>• برنامج تدريبي في النجاح المتميز<br>• إدارة الأزمات والكوارث<br>• الإدارة الفعالة للوقت<br>• المهارات الإدارية والقانونية<br>• الاتجاهات الحديثة<br>• التخطيط الاستراتيجي<br>• مهارات العرض والاتصال</p>
                         </div>
                     </div>
                     
@@ -792,6 +831,334 @@
             </div>
         </div>
 
+        <!-- نافذة المعلومات للدكتور أسامة أحمد حسن -->
+        <div class="teacher-info" id="info-6">
+            <div class="info-header">
+                <h2>د. أسامة أحمد حسن أحمد</h2>
+                <button class="close-btn" onclick="hideInfo(6)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="info-content">
+                <div class="info-column">
+                    <div class="info-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <div class="info-content-text">
+                            <h3>المؤهلات العلمية</h3>
+                            <p>• دكتوراه الفلسفة في الخدمة الاجتماعية وتنمية المجتمع عام 2017م بتقدير ممتاز مع التوصية بالتبادل مع الجامعات والمراكز البحثية<br>• ماجستير في الخدمة الاجتماعية وتنمية المجتمع عام 2013م بتقدير ممتاز مع التوصية بالتبادل مع الجامعات والمراكز البحثية<br>• بكالوريوس الخدمة الاجتماعية وتنمية المجتمع عام 2006م بتقدير ممتاز مع مرتبة الشرف</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div class="info-content-text">
+                            <h3>المنصب الحالي</h3>
+                            <p>أستاذ مساعد بقسم التخطيط الاجتماعي - كلية الخدمة الاجتماعية - جامعة الأزهر</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-book"></i>
+                        <div class="info-content-text">
+                            <h3>مجالات التخصص</h3>
+                            <p>التخطيط الاجتماعي - الخدمة الاجتماعية وتنمية المجتمع</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="info-content-text">
+                            <h3>التدرج الوظيفي</h3>
+                            <p>• معيد (2008-2014)<br>• مدرس مساعد (2014-2018)<br>• مدرس (2018-2023)<br>• أستاذ مساعد (2023 - حتى الآن)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-column">
+                    <div class="info-item">
+                        <i class="fas fa-trophy"></i>
+                        <div class="info-content-text">
+                            <h3>الدورات التدريبية</h3>
+                            <p>• دورة خرائط المنهج وتوصيف المقررات (2021)<br>• دورة فنيات تصميم وإعداد البحوث العلمية (2021)<br>• دورة إعداد الدراسة الذاتية لمؤسسات التعليم العالي (2021)<br>• دورة مهارات العرض الفعال (2021)<br>• دورة الاختبارات التحصيلية وفنيات صياغة مفرداتها (2022)<br>• دورة استخدام منصات التعلم الإلكترونية (2022)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <div class="info-content-text">
+                            <h3>الإشراف العلمي والمشاركات</h3>
+                            <p>• الإشراف والمناقشة للعديد من الرسائل العلمية<br>• المشاركة في المؤتمرات العلمية المتخصصة</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>معلومات الاتصال</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>hassanosamah091@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>01063189334</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>قسم التخطيط الاجتماعي - كلية الخدمة الاجتماعية - جامعة الأزهر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نافذة المعلومات للدكتور عبدالحميد القراجي -->
+        <div class="teacher-info" id="info-7">
+            <div class="info-header">
+                <h2>د. عبدالحميد عبدالمنعم عبدالحميد خميس القراجي</h2>
+                <button class="close-btn" onclick="hideInfo(7)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="info-content">
+                <div class="info-column">
+                    <div class="info-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <div class="info-content-text">
+                            <h3>المؤهلات العلمية</h3>
+                            <p>• دكتوراه الفلسفة في الخدمة الاجتماعية وتنمية المجتمع تخصص تخطيط اجتماعي، بتقدير مرتبة الشرف الأولى (2023)<br>• ماجستير في الخدمة الاجتماعية وتنمية المجتمع تخصص تخطيط اجتماعي بتقدير ممتاز (2016)<br>• بكالوريوس الخدمة الاجتماعية وتنمية المجتمع عام 2007م بتقدير جيد جداً مع مرتبة الشرف (الترتيب الثاني على القسم)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div class="info-content-text">
+                            <h3>المنصب الحالي</h3>
+                            <p>مدرس بقسم التخطيط الاجتماعي - كلية الخدمة الاجتماعية - جامعة الأزهر</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-book"></i>
+                        <div class="info-content-text">
+                            <h3>مجالات التخصص</h3>
+                            <p>التخطيط الاجتماعي - الخدمة الاجتماعية وتنمية المجتمع</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-building"></i>
+                        <div class="info-content-text">
+                            <h3>الخبرات العملية</h3>
+                            <p>• أخصائي اجتماعي بالأزهر الشريف (2008-2012)<br>• مدرس بكلية الخدمة الاجتماعية - جامعة الأزهر (حتى الآن)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-column">
+                    <div class="info-item">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="info-content-text">
+                            <h3>العناوين البحثية</h3>
+                            <p>• رسالة الماجستير: "التخطيط لتفعيل ديناميات العمل الفريقي بالمؤسسات الطبية في ضوء معايير الجودة الشاملة" (2016)<br>• رسالة الدكتوراه: "استراتيجية مقترحة لتنمية القدرات الإبداعية للأخصائيين الاجتماعيين بمدارس المتفوقين الثانوية في العلوم والتكنولوجيا STEM" (2023)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="info-content-text">
+                            <h3>التخصص الدقيق</h3>
+                            <p>التخطيط الاجتماعي</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>معلومات الاتصال</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ebdalhamidalqarajaa780.el@azhar.edu.eg</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>abdelhamedelkaragy@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>01027364415</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>قسم التخطيط الاجتماعي - كلية الخدمة الاجتماعية - جامعة الأزهر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نافذة المعلومات للدكتور مصطفى محمود أحمد -->
+        <div class="teacher-info" id="info-8">
+            <div class="info-header">
+                <h2>د. مصطفى محمود أحمد</h2>
+                <button class="close-btn" onclick="hideInfo(8)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="info-content">
+                <div class="info-column">
+                    <div class="info-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <div class="info-content-text">
+                            <h3>المؤهلات العلمية</h3>
+                            <p>• دكتوراه الفلسفة في الخدمة الاجتماعية وتنمية المجتمع، تخصص تنمية مجتمع بتقدير مرتبة الشرف الأولى<br>• ماجستير في الخدمة الاجتماعية وتنمية المجتمع، تخصص تنمية مجتمع بتقدير ممتاز مع التوصية بتداول الرسالة مع الجامعات والمراكز البحثية<br>• بكالوريوس الخدمة الاجتماعية وتنمية المجتمع عام 2002م بتقدير جيد جداً مع مرتبة الشرف</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div class="info-content-text">
+                            <h3>المنصب الحالي</h3>
+                            <p>مدرس بقسم تنمية المجتمع والدراسات البيئية - كلية الخدمة الاجتماعية - جامعة الأزهر</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-book"></i>
+                        <div class="info-content-text">
+                            <h3>مجالات التخصص</h3>
+                            <p>تنمية المجتمع - الدراسات البيئية - الخدمة الاجتماعية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-column">
+                    <div class="info-item">
+                        <i class="fas fa-trophy"></i>
+                        <div class="info-content-text">
+                            <h3>الدورات التدريبية</h3>
+                            <p>• خرائط المنهج وتوصيف المقررات<br>• إعداد الدراسة الذاتية لمؤسسات التعليم العالي<br>• نظم الامتحانات وتقويم الطلاب<br>• فنيات تصميم وإعداد البحوث العلمية<br>• مهارات العرض الفعال<br>• التسويق الشخصي لعضو هيئة التدريس<br>• توصيف البرامج والمقررات وتقويم نواتج التعلم لمؤسسات التعليم العالي<br>• الاختبارات التحصيلية وفنيات صياغة مفرداتها</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <div class="info-content-text">
+                            <h3>الإشراف العلمي والمشاركات</h3>
+                            <p>• الإشراف على العديد من الرسائل العلمية<br>• المشاركة في العديد من المؤتمرات العلمية الدولية والمحلية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>معلومات الاتصال</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>mustafamohamed2463.el@azhar.edu.eg</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>كلية الخدمة الاجتماعية بنين الخانكه - جامعة الأزهر - القاهرة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نافذة المعلومات للدكتور عبد الفتاح الجمل -->
+        <div class="teacher-info" id="info-9">
+            <div class="info-header">
+                <h2>د. عبد الفتاح عمر محمد سالم الجمل</h2>
+                <button class="close-btn" onclick="hideInfo(9)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="info-content">
+                <div class="info-column">
+                    <div class="info-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <div class="info-content-text">
+                            <h3>المؤهلات العلمية</h3>
+                            <p>• دكتوراه الفلسفة في الخدمة الاجتماعية وتنمية المجتمع تخصص مجالات الخدمة الاجتماعية عام 2020م مع التوصية بالطبع<br>• ماجستير في الخدمة الاجتماعية وتنمية المجتمع عام 2017م بتقدير ممتاز مع التوصية بتبادل الرسالة<br>• بكالوريوس الخدمة الاجتماعية وتنمية المجتمع بتقدير جيد جداً - ترتيب الأول على الدفعة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div class="info-content-text">
+                            <h3>المنصب الحالي</h3>
+                            <p>مدرس بقسم مجالات الخدمة الاجتماعية - كلية الخدمة الاجتماعية - جامعة الأزهر</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-book"></i>
+                        <div class="info-content-text">
+                            <h3>مجالات التخصص</h3>
+                            <p>مجالات الخدمة الاجتماعية - الخدمة الاجتماعية وتنمية المجتمع</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="info-content-text">
+                            <h3>التدرج الوظيفي</h3>
+                            <p>• معيد (2012-2017)<br>• مدرس مساعد (2017-2020)<br>• مدرس (2020 - الآن)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-column">
+                    <div class="info-item">
+                        <i class="fas fa-trophy"></i>
+                        <div class="info-content-text">
+                            <h3>الدورات التدريبية</h3>
+                            <p>• خرائط المنهج وتوصيف المقررات<br>• إعداد الدراسة الذاتية لمؤسسات التعليم العالي<br>• نظم الامتحانات وتقويم الطلاب<br>• فنيات تصميم وإعداد البحوث العلمية<br>• مهارات العرض الفعال</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <div class="info-content-text">
+                            <h3>الإشراف العلمي والمشاركات</h3>
+                            <p>• الإشراف على العديد من الرسائل العلمية<br>• نشر العديد من الأبحاث في مجلات علمية محكمة<br>• المشاركة في المؤتمرات العلمية المتخصصة</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-cogs"></i>
+                        <div class="info-content-text">
+                            <h3>المهارات والخبرات</h3>
+                            <p>• خبرة تدريسية في مجالات متعددة<br>• خبرة في التعامل مع القضايا التي تمس البيئة والأنشطة التطوعية وإقامة المعسكرات الكشفية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>معلومات الاتصال</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>AbdelFattahSalem1114.el@azhar.edu.eg</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>abdelfattahelgamel85@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>قسم مجالات الخدمة الاجتماعية - كلية الخدمة الاجتماعية - جامعة الأزهر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- نافذة المعلومات للدكتور عمرو -->
         <div class="teacher-info" id="info-2">
             <div class="info-header">
@@ -868,157 +1235,6 @@
                         <div class="contact-item">
                             <i class="fas fa-clock"></i>
                             <span>أيام العمل: الأحد - الثلاثاء - الخميس</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- نافذة المعلومات للدكتور عبد الفتاح فرج محمد مسعد -->
-        <div class="teacher-info" id="info-6">
-            <div class="info-header">
-                <h2>د. عبد الفتاح فرج محمد مسعد</h2>
-                <button class="close-btn" onclick="hideInfo(6)">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <div class="info-content">
-                <div class="info-column">
-                    <div class="info-item">
-                        <i class="fas fa-user-graduate"></i>
-                        <div class="info-content-text">
-                            <h3>المؤهلات العلمية</h3>
-                            <p>
-                                • دكتوراه في الخدمة الاجتماعية وتنمية المجتمع تخصص (تنمية مجتمع) بتقدير ممتاز مع التوصية بتبادل الرسالة مع الجامعات والمراكز البحثية المتخصصة عام 2020م<br>
-                                • ماجستير في الخدمة الاجتماعية وتنمية المجتمع تخصص (تنمية مجتمع) بتقدير ممتاز مع التوصية بتبادل الرسالة مع الجامعات والمراكز البحثية المتخصصة عام 2016م<br>
-                                • ماجستير في إدارة الجودة وإدارة الأعمال تقدير ممتاز عام 2014م<br>
-                                • بكالوريوس الخدمة الاجتماعية وتنمية المجتمع بتقدير ممتاز مع مرتبة الشرف عام 2004م
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-briefcase"></i>
-                        <div class="info-content-text">
-                            <h3>المنصب الحالي</h3>
-                            <p>مدرس بقسم تنمية المجتمع والدراسات البيئية بالكلية</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-book"></i>
-                        <div class="info-content-text">
-                            <h3>مجالات التخصص</h3>
-                            <p>تنمية المجتمع - الدراسات البيئية - الخدمة الاجتماعية</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-birthday-cake"></i>
-                        <div class="info-content-text">
-                            <h3>تاريخ الميلاد</h3>
-                            <p>1 مايو 1982م</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="info-column">
-                    <div class="info-item">
-                        <i class="fas fa-trophy"></i>
-                        <div class="info-content-text">
-                            <h3>الخبرات والأنشطة العلمية والمهنية والمجتمعية</h3>
-                            <p>
-                                • التدريس بالكلية للعديد من المقررات العلمية والدراسية ومنها (المدخل الى تنمية المجتمع – التنمية الاجتماعية – التنمية المحلية – الاحصاء الاجتماعي – علم الاجتماع العام – علم الاجتماع الاسلامي)<br>
-                                • المشاركة في إعداد لائحة الكلية لمرحلتى البكالوريوس والدراسات العليا بنظام الساعات المعتمدة<br>
-                                • المشاركة في الإشراف على الرسائل العلمية (الماجستير والدكتوراة)<br>
-                                • إعداد العديد من الدورات التدريبية وتقديمها بالعديد من الجهات الرسمية والأهلية والعديد من المنصات العلمية الرقمية<br>
-                                • المشاركة في القوافل التنموية التي تقدمها الجامعة للقرى المصرية الأكثر احتياجاً<br>
-                                • تقديم العديد من المقالات والتحقيقات الصحفية والمشاركة في العديد من البرامج الإذاعية والتلفزيونية حول موضوعات تتعلق بقضايا الأسرة والمجتمع<br>
-                                • نشر العديد من الأبحاث بالمجلات العلمية المحكمة على المستوى المحلى والإقليمي
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- نافذة المعلومات للدكتور هاني جعفر محمد نور عبد الهادي -->
-        <div class="teacher-info" id="info-7">
-            <div class="info-header">
-                <h2>د. هاني جعفر محمد نور عبد الهادي</h2>
-                <button class="close-btn" onclick="hideInfo(7)">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <div class="info-content">
-                <div class="info-column">
-                    <div class="info-item">
-                        <i class="fas fa-user-graduate"></i>
-                        <div class="info-content-text">
-                            <h3>المؤهلات العلمية</h3>
-                            <p>
-                                • دكتوراه الفلسفة في الخدمة الاجتماعية وتنمية المجتمع، تخصص خدمة الفرد بتقدير ممتاز مع التوصية بتبادل الرسالة مع الجامعات المصرية والعربية<br>
-                                • ماجستير في الخدمة الاجتماعية وتنمية المجتمع، تخصص خدمة الفرد بتقدير ممتاز مع التوصية بتبادل الرسالة مع الجامعات المصرية والعربية<br>
-                                • بكالوريوس الخدمة الاجتماعية وتنمية المجتمع بتقدير ممتاز مع مرتبة الشرف، بترتيب الأول على الدفعة
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-briefcase"></i>
-                        <div class="info-content-text">
-                            <h3>المنصب الحالي</h3>
-                            <p>أستاذ مساعد بقسم خدمة الفرد - كلية الخدمة الاجتماعية - جامعة الأزهر بالقاهرة</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-book"></i>
-                        <div class="info-content-text">
-                            <h3>مجالات التخصص</h3>
-                            <p>الخدمة الاجتماعية وتنمية المجتمع - خدمة الفرد</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="info-column">
-                    <div class="info-item">
-                        <i class="fas fa-trophy"></i>
-                        <div class="info-content-text">
-                            <h3>الدورات التدريبية</h3>
-                            <p>• خرائط المنهج وتوصيف المقررات<br>• إعداد الدراسة الذاتية لمؤسسات التعليم العالي<br>• نظم الامتحانات وتقويم الطلاب<br>• فنيات تصميم وإعداد البحوث العلمية<br>• مهارات العرض الفعال</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-users"></i>
-                        <div class="info-content-text">
-                            <h3>الإشراف العلمي والمشاركات</h3>
-                            <p>• الإشراف والمناقشة للعديد من الرسائل العلمية<br>• المشاركة في العديد من المؤتمرات العلمية الدولية والمحلية</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <div class="info-content-text">
-                            <h3>التخصص الدقيق</h3>
-                            <p>خدمة الفرد</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-info">
-                    <h3>معلومات الاتصال</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>hany_gafaar@azhar.edu.eg</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>كلية الخدمة الاجتماعية بنين - جامعة الأزهر - القاهرة</span>
                         </div>
                     </div>
                 </div>
